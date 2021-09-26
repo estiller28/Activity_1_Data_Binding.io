@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet"> 
+    <script src="assets/js/vue.js"></script>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png" type="image/icon type">
+    <title>Activity 1 Data Binding</title>
+</head>
+<body>
+    <section class="container" id="app">
+        <h1>Name: {{fullName}}</h1>
+        <div class="line"></div>
+        <p>Age: {{myAge}} </p>
+        <p>Age in 5 years: {{ myAgeIn5years(5) }}</p>
+        <p> Favorite Number: {{ favoriteNumber() }}</p>
+
+        <div class="card">
+            <img  v-bind:src="images">
+        </div>
+        <input type="text" v-bind:value="fullName">
+    </section>
+<script src="assets/js/app.js"></script>
+</html>
